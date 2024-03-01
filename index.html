@@ -4,25 +4,90 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/videos.css">
     <title>Youtube clone</title>
-    
-    <link rel="stylesheet" href="style_youtube.css">
 </head>
+
 <body>
-    <div class="SEARCH">
-        <input type="text" placeholder="Search" class="searchbar">
+    <div class="Header">
+        <div class="left" style="text-align: left; margin-left: 10px;">
+        <button class="options" > 
+            <img  style="width: 60%; margin-top: 4px;" src="Header icons/option.svg">
+        </button>
+
+            <img class="Youtube-homelogo" src="Header icons/youtubelogo.png">
+        </div>
+        <div class="sidebar" style="display: flex; flex-direction: column;">
+            <button class="home">
+                <img class="homeicon" style="width: 30px; margin-left: 6px;" src="Header icons\Home.svg">
+                <p class="icontext">Home</p>
+            </button>
+            <button class="shorts" >
+                <img class="shortsicon" style="width: 45px;" src="Header icons\shorts.svg">
+                <p class="icontext">Shorts</p>
+            </button>
+            <button class="subscription">
+                <img class="subscriptionicon" style="width: 30px;" src="Header icons\subscriptions.svg">
+                <p class="icontext">Subscriptions</p>
+            </button>
+            <button class="you" >
+                <img class="youicon" style="width: 30px;" src="Header icons\you.svg">
+                <p class="icontext">You</p>
+            </button>
+        </div>
+
+        <div class="center">
+            
+                <input style="margin-right: 0px;" type="text" placeholder="Search" class="searchbar"  >
+                <button class="searchicon" >
+                    <img  style="width: 70%; margin-left: 0px;" src="Header icons\searchicon.svg">
+                    <div class="tooltip" >
+                        Search
+                    </div>
+                </button>
+                
+                <div class="voicesearch">
+                    <img class="mic" src="Header icons\micbutton.svg">
+                    <div class="tooltip">
+                        Search with your voice
+                    </div>
+                </div>
+        </div>
+
+        <div class="right" >
+            <button class="createchannel">
+                <img  src="Header icons/create_channel.png" style="width: 32px; margin-left: -1px; margin-top: 3px;">
+                <div class="tooltip"> Create</div>
+            </button>
+            <button class="bellbutton">
+                <img  class="bellicon" src="Header icons\bellicon.png" style="width: 27px;  margin-left: 0px; margin-top:3px">
+                <div class="tooltip"> Notifications </div>
+            </button>
+
+            <img class="My-profile" src="Header icons\myprofile.png">
+        </div>
+        
     </div>
-    <div class="vid_details">
+    
+<div class="vidgrid">
+    <!-- grid properties and its usages -->
+        <div class="vid_details">
         <!-- div is used for creating a block of container so that we can place multiple blocks in a line
         without div the elements take up all the space of line on the page;
         div by default is a block element -->
         <!-- nesting of divs to follow vertical layouts -->
-        <div>
-        <img class="thumbnail" src="thumbnails\hq720.webp"></div>
+        <div style="position: relative;">
+            <img class="thumbnail" src="thumbnails\hq720.webp">
+                <div class="time" style="position: absolute; bottom:8px; right: -12px ;background-color: black; color: white;padding: 3px; border-radius: 5px;">
+                    6:31:24
+                </div>
+            </div>
         <div>
             <!-- To make horizontal layouts to fit in the information 
                 besides the channel profile -->
+        <div class="videoinfo">
         <div class="profile">
             <img class="ChannelProfile" src="thumbnails\profile-supersimpledev.jpg">
         </div>
@@ -34,14 +99,20 @@
             <p class="stats">8.3M views <strong>&middot;</strong> 1 year ago</p>
             </div>
         </div>                
+    </div>                
         
     </div>
 
     <div class="vid_details">
         
-        <div >
-        <img class="thumbnail" src="thumbnails\geeky_ranjit.webp"></div>
+        <div style="position: relative;">
+            <img class="thumbnail" src="thumbnails\geeky_ranjit.webp">
+                <div class="time" style="position: absolute; bottom:8px; right: -12px ;background-color: black; color: white;padding: 3px; border-radius: 5px;">
+                36:06
+                </div>
+        </div>
         <div>
+            <div class="videoinfo">
         <div class="profile">
             <img class="ChannelProfile" src="thumbnails\geekyranjit.jpg">
         </div>
@@ -53,13 +124,17 @@
         <p class="stats">23k views <strong>&middot;</strong> 18 hours ago</p></div>
         </div>
     </div>
+</div>
 
     <div class="vid_details">
-    <div>
-        
+
+    <div style="position: relative;">
         <img class="thumbnail" src="thumbnails\hobbies.jpg">
+        <div class="time" style="position: absolute; bottom:8px; right: -12px ;background-color: black; color: white;padding: 3px; border-radius: 5px;">
+            6:33
+        </div>        
     </div>
-    <div>
+    <div class="videoinfo">
         <div class="profile">
             <img class="ChannelProfile" src="thumbnails\colinchad.jpg">
         </div>
@@ -72,6 +147,74 @@
         </div>
     </div>
     </div>
+    <div class="vid_details">
+        
+        <div style="position: relative;">
+            <img class="thumbnail" src="thumbnails\sapnevseveryone.webp">
+                <div class="time" style="position: absolute; bottom:8px; right: -12px ;background-color: black; color: white;padding: 3px; border-radius: 5px;">
+                    2:41
+                </div>
+        </div>
+        <div>
+            <div class="videoinfo">
+        <div class="profile">
+            <img class="ChannelProfile" src="thumbnails\tvfmusic.jpg">
+        </div>
+        <div class="vid_info">
+        <p class="vid_title">
+            A Dreamer's Rap | Music Video | Aniket Raturi, Akaash Mukherjee | Sapne Vs Everyone | TVF Music 
+        </p>
+        <p class="channel">TVF Music</p>
+        <p class="stats">195k views <strong>&middot;</strong> 1 month ago</p></div>
+        </div>
+    </div>
+</div>
+
+    <div class="vid_details">
+       <div style="position: relative;">
+        
+        <img class="thumbnail" src="thumbnails\makeyourYT.webp">
+        <div class="time" style="position: absolute; bottom:8px; right: -12px ;background-color: black; color: white;padding: 3px; border-radius: 5px;">
+            41:38
+        </div>
+    </div>
+    <div class="videoinfo">
+        <div class="profile">
+            <img class="ChannelProfile" src="thumbnails\makeytprofile.jpg">
+        </div>
+        <div class="vid_info">
+        <p class="vid_title">
+            Rebuild YouTube with Ruby on Rails?!!
+        </p>
+        <p class="channel">Indigo Tech Tutorials</p>
+        <p class="stats">1K views <strong>&middot;</strong> 3 weeks ago</p>
+        </div>
+    </div>
+    </div> 
+    <div class="vid_details">
+        
+
+        <div style="position: relative;">
+        <img class="thumbnail" src="thumbnails\Shooterjawan.webp"></div>
+        <div class="time" style="position: absolute; bottom:148px; right: -12px ;background-color: black; color: white;padding: 3px; border-radius: 5px;">
+            36:06
+        </div>
+        <div>
+            <div class="videoinfo">
+        <div class="profile">
+            <img class="ChannelProfile" src="thumbnails\dicemedia.jpg">
+        </div>
+        <div class="vid_info">
+        <p class="vid_title">
+            1st Tech QnA Session for 2024 - Smartphone AI, AirFibre and More         
+        </p>
+        <p class="channel">Dice Media        </p>
+        <p class="stats">2.8M views <strong>&middot;</strong> 1 year ago</p></div>
+        </div>
+    </div>
+</div>
+
+</div>
     <!-- Nested layout : combination of nesting vertical and horizontal layouts -->
 </body>
 </html>
