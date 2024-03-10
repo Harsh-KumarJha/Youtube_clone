@@ -1,13 +1,13 @@
 .Header{
     text-align: center;
-    height: 55px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;  
     column-gap: 0px; 
     align-items: center;
     position: fixed;
-    z-index: 3;
+    z-index: 200;
     top: 0;
     left: 0;
     right: 0;
@@ -16,7 +16,9 @@
     border-bottom-style: solid ;
     size: 90px;
     margin: 0%;
-    padding-top: 2px;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+    
 }
 
 
@@ -26,8 +28,9 @@
 max-width: 200px;
 min-width: 150px;
 display:flex;
+
 flex-direction: row;
-column-gap: 10px;
+column-gap: 2px;
 align-items: center;
 flex-shrink: 0;
 margin-top: 10px;
@@ -41,6 +44,7 @@ margin-top: 10px;
     cursor: pointer;
     border: none;
 }
+
 .options:hover{
     background-color: rgb(40, 40, 40);
 }
@@ -98,7 +102,7 @@ margin-top: 10px;
 }
 .searchicon{
     width: 60px;
-    height: 42px;
+    height: 43px;
     border: solid;
     border-width: 1px;
     border-color: rgb(64, 64, 64);
@@ -112,10 +116,13 @@ margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 0px;
     padding: 0%;
-    padding-top: 10px;
-    padding-left: 15px;
+    padding-top: 12px;
+    padding-left: 5px;
     cursor: pointer;
-    
+    position: relaitve;
+    display: flex;
+    justify-content: center;
+
 }
 
 
@@ -124,63 +131,68 @@ margin-top: 10px;
     background-color: rgb(116, 116, 116);
     margin-top: 25px;
     padding: 8px;
-    
+    white-space: nowrap;
     margin-left: -15px;
     border-radius: 2px;
+    position: absolute;
     opacity: 0;
     transition: opacity 0.2s;
 }
-
-.createchannel .tooltip{
-    padding-right: 45px;
+.searchicon .tooltip{
+    top:50px;
     pointer-events: none;
-    transition: opacity 0.2px;
-    font-family: 'Roboto',"Arial", sans-serif;
-    font-size: 0.8rem;
 }
 
+.createchannel .tooltip{
+    /* padding-right: 45px; */
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+    font-family: 'Roboto',"Arial", sans-serif;
+    font-size: 0.8rem;
+    pointer-events: none;
+    top: 35px;
+    right: -5px;
+    position: absolute;
+}
+
+
 .bellbutton .tooltip{
-    padding-right: 80px;
-    margin-left: -25px;
     opacity: 0;
     white-space: nowrap;
     pointer-events: none;
-    transition: opacity 0.2px;
+    transition: opacity 0.2s;
     font-family: 'Roboto',"Arial", sans-serif;
     font-size: 0.8rem;
+    top: 50px;
+    position: absolute;
+    right: 60px;
 }
-.searchicon:hover .tooltip{
-    opacity: 1;
+.searchicon:hover .tooltip, .bellbutton:hover .tooltip, 
+.voicesearch:hover .tooltip, .createchannel:hover .tooltip{
+    opacity: 0.9;
 }
 
-.bellbutton:hover .tooltip{
-    opacity: 1;
-    
-
-}
 
 .voicesearch .tooltip{
-    margin-top: 5px;
+    top: 40px;
+    position: absolute;
     pointer-events: none;
     white-space: nowrap;
     font-family: 'Roboto',"Arial", sans-serif;
     font-size: 0.8rem;
+    transition: opacity 0.2s;
 }
 
-.voicesearch:hover .tooltip{
-    opacity: 1;
-    
 
-}
-.createchannel:hover .tooltip{
-    opacity: 1;
-}
-.mic{
+.voicesearch{
+    display: flex;
+    justify-content: center;
     width: 75px;
-    margin-left: 0px;
-    margin-top: 38px;
+    margin-top: -4px;
     vertical-align: top;
     cursor: pointer;
+    position: relative;
 }
 
 /* right section */
@@ -196,7 +208,7 @@ margin-top: 10px;
     align-items: center;
     margin-top: 1%;
     flex-shrink: 0;
-    padding-right: 15px;
+    padding-right: 35px;
 }
 .My-profile{
     width: 37px;
@@ -205,8 +217,11 @@ margin-top: 10px;
     /* flex:1; */
 }
 .bellbutton{
+    display: flex;
+    justify-content: center;
     width: 45px;
     height: 45px;
+    position: relaitve;
     border:none;
     background-color: black;
     transition: background-color 0.15s;
@@ -214,19 +229,22 @@ margin-top: 10px;
     border-radius: 100%;
     cursor: pointer;
     padding-top: 3px;
+       
 }
 
 .createchannel{
 
+    display: flex;
+    justify-content: center;
     width: 45px;
     height: 45px;
+    position:relative;
     border-radius: 30px;
     background-color: black;
     transition: background-color 0.15s;
     border:none;
-    
-    padding-top: 4px;
-    padding-left: 7px;
+    padding-top: 5px;
+    padding-left: 8px;
     /* flex:1; */
     cursor: pointer;
 }
@@ -238,11 +256,11 @@ margin-top: 10px;
 
 .sidebar{
     position: fixed;
-    
+    z-index: 100;
     left: 0;
     bottom: 0;
     background-color: black;
-    top: 55px;
+    top: 57px;
     display: flex;
     justify-content: top;
     padding-top: 25px;
