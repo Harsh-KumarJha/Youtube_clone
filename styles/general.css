@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(7, 7, 7);
+    padding-top: 60px;
+    margin-right: 100px;
+}
+
+.home,.shorts,.subscription,.you{
+    background-color: black; 
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.15s;
+    cursor: pointer;
+    margin: 0%;
+    margin-top: 10%;
+    padding: 0%;
+    
+       
+}
+.homeicon,.shortsicon,.subscriptionicon,.youicon{
+    justify-content: center;
+    margin-top:10%;
+    
+}
+.shortsicon{
+    margin-top: 0%;
+}
+
+.home:hover{
+    background-color: rgb(50, 50, 50);
+}
+.shorts:hover{
+    background-color: rgb(50, 50, 50);
+}
+.subscription:hover{
+    background-color: rgb(50, 50, 50);
+}
+.you:hover{
+    background-color: rgb(50, 50, 50);
+}

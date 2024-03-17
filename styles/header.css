@@ -1,0 +1,275 @@
+.Header{
+    text-align: center;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    column-gap: 0px; 
+    align-items: center;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    border-bottom-width: 1px ;
+    border-bottom-style: solid ;
+    size: 90px;
+    margin: 0%;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+    
+}
+
+
+/* Left section */
+
+.left{
+max-width: 200px;
+min-width: 150px;
+display:flex;
+
+flex-direction: row;
+column-gap: 2px;
+align-items: center;
+flex-shrink: 0;
+margin-top: 10px;
+}
+.options{
+    height: 45px;
+    width: 45px;
+    background-color: black;
+    border-radius: 100%;
+    transition: background-color 0.15s;
+    cursor: pointer;
+    border: none;
+}
+
+.options:hover{
+    background-color: rgb(40, 40, 40);
+}
+.Youtube-homelogo{
+    flex: 1;
+    margin-top: 5px ;
+    vertical-align: top;
+    width: 70%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/* Centre search bar */
+.center{
+    
+    flex:1;
+    max-width: 750px;
+    min-width: 150px;
+    margin-left: 40px;
+    /* margin-right: 200px;
+    margin-left: 150px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+/* .searchbar::placeholder{
+
+} */
+.searchbar{
+
+    color: rgb(211, 210, 210);
+    font-size: 20px;
+    border-style: solid;
+    border-width: 0.2px;
+    border-radius: 20px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-color: rgb(64, 64, 64);
+    background-color: black;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 29px;
+    padding:6px;
+    padding-left: 20px;
+    padding-right: 0%;
+    box-shadow: white;
+    flex: 1;
+    margin-right: 0%;
+    
+}
+.searchicon{
+    width: 60px;
+    height: 43px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(64, 64, 64);
+    background-color:rgb(40, 40, 40) ;
+    text-align: start;
+    margin: 0%;
+    margin-top: -10px;
+    margin-left: -3px;
+    border-top-right-radius:25px  ;
+    border-bottom-right-radius:25px  ;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    padding: 0%;
+    padding-top: 12px;
+    padding-left: 5px;
+    cursor: pointer;
+    position: relaitve;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.tooltip{
+    color: rgb(255, 255, 255);
+    background-color: rgb(116, 116, 116);
+    margin-top: 25px;
+    padding: 8px;
+    white-space: nowrap;
+    margin-left: -15px;
+    border-radius: 2px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.searchicon .tooltip{
+    top:50px;
+    pointer-events: none;
+}
+
+.createchannel .tooltip{
+    /* padding-right: 45px; */
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+    font-family: 'Roboto',"Arial", sans-serif;
+    font-size: 0.8rem;
+    pointer-events: none;
+    top: 35px;
+    right: -5px;
+    position: absolute;
+}
+
+
+.bellbutton .tooltip{
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    font-family: 'Roboto',"Arial", sans-serif;
+    font-size: 0.8rem;
+    top: 50px;
+    position: absolute;
+    right: 60px;
+}
+.searchicon:hover .tooltip, .bellbutton:hover .tooltip, 
+.voicesearch:hover .tooltip, .createchannel:hover .tooltip{
+    opacity: 0.9;
+}
+
+
+.voicesearch .tooltip{
+    top: 40px;
+    position: absolute;
+    pointer-events: none;
+    white-space: nowrap;
+    font-family: 'Roboto',"Arial", sans-serif;
+    font-size: 0.8rem;
+    transition: opacity 0.2s;
+}
+
+
+.voicesearch{
+    display: flex;
+    justify-content: center;
+    width: 75px;
+    margin-top: -4px;
+    vertical-align: top;
+    cursor: pointer;
+    position: relative;
+}
+
+/* right section */
+.right{
+    
+    max-width: 170px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+    align-items: center;
+    margin-top: 1%;
+    flex-shrink: 0;
+    padding-right: 35px;
+}
+.My-profile{
+    width: 37px;
+    border-radius: 100%;
+    cursor: pointer;
+    /* flex:1; */
+}
+.bellbutton{
+    display: flex;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    position: relaitve;
+    border:none;
+    background-color: black;
+    transition: background-color 0.15s;
+    /* flex:1; */
+    border-radius: 100%;
+    cursor: pointer;
+    padding-top: 3px;
+       
+}
+
+.createchannel{
+
+    display: flex;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    position:relative;
+    border-radius: 30px;
+    background-color: black;
+    transition: background-color 0.15s;
+    border:none;
+    padding-top: 5px;
+    padding-left: 8px;
+    /* flex:1; */
+    cursor: pointer;
+}
+
+.bellbutton:hover,.createchannel:hover{
+    background-color: rgb(40, 40, 40);
+}
+
+
+.sidebar{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    top: 57px;
+    display: flex;
+    justify-content: top;
+    padding-top: 25px;
+    /* flex-direction: column; */
+    
+}
+
+.icontext{
+    color: white;
+    font-family: 'Roboto',"Arial", sans-serif;
+    font-size: 0.7rem;
+}
